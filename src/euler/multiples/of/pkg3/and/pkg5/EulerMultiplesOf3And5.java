@@ -20,17 +20,24 @@ public class EulerMultiplesOf3And5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        // Initial variables
         final int startNumber = 999;
         double currentNumber = startNumber;
         int currentAmount = 0;
         
+        // Checks each number and sees if they are a multiple of 5 or 3.
         while(currentNumber > 0){
+            
+            // If the number is a multiple of 5 or 3, add the current number to
+            // the current count.
             if(currentNumber / 5 == (int)currentNumber / 5 || currentNumber / 3 == (int)currentNumber / 3){
                 currentAmount += currentNumber;
-                System.out.println(currentNumber);
             }
             currentNumber--;
         }
+        
+        // Print out the end result.
         System.out.println(currentAmount);
     }
     
